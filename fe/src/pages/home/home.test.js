@@ -7,7 +7,7 @@ jest.mock('./user', () => () => <div />)
 
 describe('Home', () => {
 	it('renders home component', () => {
-		const wrapper = shallow(<Home />);
+		const wrapper = shallow(<Home reportLastUserId={jest.fn()} />);
 		expect(wrapper).toMatchSnapshot();
 	});
 
