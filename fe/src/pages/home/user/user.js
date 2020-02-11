@@ -2,8 +2,10 @@ import React from 'react';
 
 const User = ({age, name}) => {
 
+	const className = `user-${age}`
+
 	return (
-		<div className='user'>
+		<div className={className}>
 			<div>
 				Name: {name}
 			</div>

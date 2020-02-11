@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User renders user component 1`] = `
+<div
+  className="user-20"
+>
+  <div>
+    Name: 
+    Jarda
+  </div>
+  <div>
+    Age: 
+    20
+  </div>
+</div>
+`;

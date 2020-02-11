@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {LIST_OF_USERS} from './home-const';
 import User from './user'
 
-const Home = () => {
+const Home = ({reportLastUserId}) => {
 
 	const [users, setUsers] = useState(LIST_OF_USERS)
 
@@ -24,9 +24,15 @@ const Home = () => {
 
 	const renderButtons = () => {
 		return (
-			<button onClick={handleAddClicked}>
-				Add random
-			</button>
+			<div>
+				<button onClick={handleAddClicked}>
+					Add random
+				</button>
+
+				<button className='reportButton' onClick={() => reportLastUserId(users[users.length - 1].id)}>
+					Report last user id
+				</button>
+			</div>
 		)
 	}
 
